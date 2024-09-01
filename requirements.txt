@@ -1,0 +1,9 @@
+Kivy==2.3.0
+kivygradient==0.0.5
+biopython==1.78
+peptides==0.3.2
+https://github.com/kivymd/KivyMD/archive/master.zip
+materialyoucolor
+exceptiongroup
+asyncgui
+asynckivy

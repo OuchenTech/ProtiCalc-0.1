@@ -1,0 +1,37 @@
+#: import Gradient kivy_gradient.Gradient
+#: import hex kivy.utils.get_color_from_hex
+
+<GradientButton>
+    text: root.text
+    color: root.text_color
+    font_name: 'assets/fonts/Poppins-Regular.ttf'
+    background_normal: ''
+    background_color: [0, 0, 0, 0]
+    size_hint: .9, None
+    height: dp(48)
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: 12, 12, 12, 12
+            texture: Gradient.horizontal(hex('#25aae1'), hex('#eb72ac'))
+            
+<ColoredButton>
+    text: root.text
+    color: root.text_color
+    font_name: 'assets/fonts/Poppins-Regular.ttf'
+    background_normal: ''
+    background_color: [0, 0, 0, 0]
+    size_hint: .9, None
+    height: dp(42)
+    
+    canvas.before:
+        Color:
+            rgba: hex(root.bg_color)
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: 12, 12, 12, 12  

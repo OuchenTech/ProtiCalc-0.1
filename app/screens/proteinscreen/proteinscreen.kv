@@ -1,0 +1,86 @@
+#:import Clipboard kivy.core.clipboard.Clipboard
+
+<ProteinScreen>
+
+    MDFloatLayout:
+        size: root.width, root.height
+        md_bg_color: '#f3f4f6'
+        
+        MDIconButton:
+            icon: 'arrow-left-bold'
+            style: 'tonal'
+            pos_hint: {'x': 0.01, 'top': 0.99}
+            theme_bg_color: 'Custom'
+            md_bg_color: 'white'
+            theme_icon_color: 'Custom'
+            icon_color: 'gray'
+            on_release:
+                root.manager.transition.direction = 'right'
+                root.manager.current = 'menu_screen'
+                
+        MDBoxLayout:
+            size_hint: None, None
+            size: self.minimum_size
+            pos_hint: {'right': 0.99, 'top': 0.99}
+            spacing: '10dp'
+            
+            MDIconButton:
+                icon: 'content-paste'
+                style: 'tonal'
+                #pos_hint: {'right': 0.99, 'top': 0.99}
+                theme_bg_color: 'Custom'
+                md_bg_color: 'white'
+                theme_icon_color: 'Custom'
+                icon_color: 'gray'
+                on_release:
+                    root.ids.protein_seq_input.text = Clipboard.paste()
+            MDIconButton:
+                icon: 'trash-can-outline'
+                style: 'tonal'
+                #pos_hint: {'right': 0.99, 'top': 0.99}
+                theme_bg_color: 'Custom'
+                md_bg_color: 'white'
+                theme_icon_color: 'Custom'
+                icon_color: 'gray'
+                on_release:
+                    root.reset()
+            
+        MDBoxLayout:
+            orientation: 'vertical'
+            size_hint: 1, .9
+            pos_hint: {'center_x': .5,'center_y': .45}
+            
+            ScrollView:
+                bar_width: dp(2)
+                effect_cls:'ScrollEffect'
+                scroll_type:['content']
+                
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    padding: ['20dp', '5dp', '20dp', '20dp']
+                    spacing: '40dp'
+                    adaptive_height: True
+                    
+                    CustomFloatLayout:
+                        pos_hint: {'center_x': .5,'top': 1}
+                        
+                        TextArea:
+                            size_hint: .9, .6
+                            pos_hint: {'center_x': .5, 'center_y': .65}
+                            
+                            CustomTextInput:
+                                id: protein_seq_input
+                                hint_text: "Enter or paste a protein sequence"
+                                pos_hint: {'center_x': .5, 'center_y': .5}
+                                
+                        GradientButton:
+                            id: analysis_btn
+                            text: 'Compute Parameters'
+                            pos_hint: {'center_x': .5, 'center_y': .15}
+                            on_release:
+                                root.compute_protein_params()
+                            
+                    MDBoxLayout:
+                        id: protein_analysis_result
+                        adaptive_height: True
+                        orientation: 'vertical'            

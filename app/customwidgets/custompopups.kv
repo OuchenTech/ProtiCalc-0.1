@@ -1,0 +1,72 @@
+#:import ModalView kivy.uix.modalview.ModalView
+#:import MDFloatLayout kivymd.uix.floatlayout.MDFloatLayout
+
+<ErrorPopup@ModalView>      
+    auto_dismiss: False
+    size_hint: .8, .34
+    
+    MDFloatLayout:
+        size_hint: 1, 1
+        radius: [12]
+        md_bg_color: 'white'
+        
+        CustomBoldLabel:
+            text: "Error!"
+            pos_hint: {'center_x': 0.5, 'center_y': 0.8}
+            
+        MDBoxLayout:
+            orientation: 'vertical'
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+            size_hint: 1, None
+            height: self.minimum_height
+            padding: 20
+            spacing: 5
+            
+            CustomRegularLabel:
+                id: error_label
+                
+        GradientButton:
+            text: 'Try Again'
+            pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+            size_hint_x: .9
+            on_press:
+                root.dismiss() 
+
+<ExitPopup@ModalView>      
+    auto_dismiss: False
+    size_hint: .8, .34
+    
+    MDFloatLayout:
+        size_hint: 1, 1
+        radius: [12]
+        md_bg_color: 'white'
+        
+        CustomBoldLabel:
+            text: "Exit!"
+            pos_hint: {'center_x': 0.5, 'center_y': 0.8}
+            
+        MDBoxLayout:
+            orientation: 'vertical'
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+            size_hint: 1, None
+            height: self.minimum_height
+            padding: 20
+            spacing: 5
+            
+            CustomRegularLabel:
+                text: 'Are you sure you want to exit?'
+                
+        ColoredButton:
+            id: yes_button
+            text: 'Yes'
+            pos_hint: {'x': 0.1, 'center_y': 0.2}
+            size_hint_x: .22
+                
+        ColoredButton:
+            text: 'No'
+            bg_color: '#eb72ac'
+            pos_hint: {'right': 0.9, 'center_y': 0.2}
+            size_hint_x: .22
+            on_press:
+                root.dismiss() 
+    

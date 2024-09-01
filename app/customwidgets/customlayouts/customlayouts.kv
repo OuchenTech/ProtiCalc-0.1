@@ -1,0 +1,56 @@
+#: import Gradient kivy_gradient.Gradient
+#: import hex kivy.utils.get_color_from_hex
+
+<CustomFloatLayout>
+    size_hint: 1, None
+    height: '240dp'
+    md_bg_color: 'white'
+    radius: [12]
+    
+<SectionName@MDBoxLayout>
+    size_hint: 1, None
+    height: '60dp'
+    pos_hint: {'top': 1}
+    
+    canvas:
+        Color:
+            rgba: 1, 1, 1, 1
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            texture: Gradient.horizontal(hex('#25aae1'), hex('#eb72ac'))
+            radius: 12, 12, 0, 0
+    
+<SectionBoxLayout>
+    padding: [0, 0, 0, 10]
+    spacing: '10dp'
+    adaptive_height: True
+    orientation: 'vertical' 
+           
+    canvas:
+        Color:
+            rgba: 1, 1, 1, 1
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: [12]
+    
+    SectionName:
+    
+        CustomBoldLabel:
+            text: root.section_name
+            color: 'white'
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            
+<GradientSeparator>
+    size_hint: 1, None
+    height: '2dp'
+    
+    canvas:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            texture: Gradient.horizontal(hex('#25aae1'), hex('#eb72ac'))
+               

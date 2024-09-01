@@ -1,0 +1,20 @@
+#:import hex kivy.utils.get_color_from_hex
+
+<TextArea@MDBoxLayout>
+    canvas:
+        Color: 
+            rgba: hex('#e0e0e1')
+        Line:
+            rounded_rectangle : (self.x, self.y, self.width, self.height, 12)
+            width : 1.1
+            
+<CustomTextInput@TextInput>
+    size_hint: 1, 1
+    font_name: 'assets/fonts/Poppins-Regular.ttf'
+    font_size: '14sp'
+    cursor_color: 'grey'
+    cursor_width: '2sp'
+    background_color: 0, 0, 0, 0
+    foreground_color: 'grey'
+    padding: 15
+    multiline: True

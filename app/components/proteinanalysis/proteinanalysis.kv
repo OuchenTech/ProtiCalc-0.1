@@ -1,0 +1,53 @@
+<ProteinAnalysisResult>
+    spacing:'30dp'
+    adaptive_height: True
+    orientation: 'vertical'
+    
+    SectionBoxLayout:
+        section_name: "Amino Acids Composition"
+        
+        MDBoxLayout:
+            id: bar_chart_section
+            padding: 15
+            size_hint: 1, None
+            height: self.width
+            
+    SectionBoxLayout:
+        section_name: "Atomic composition"
+        
+        MDBoxLayout:
+            id: atomic_composition
+            orientation: 'vertical'
+            padding: 15
+            size_hint: 1, None
+            height: self.minimum_height
+            
+    SectionBoxLayout:
+        section_name: "Physico-Chemical Parameters"
+        
+        MDBoxLayout:
+            id: phy_che_params
+            orientation: 'vertical'
+            padding: 15
+            size_hint: 1, None
+            height: self.minimum_height
+            
+    SectionBoxLayout:
+        section_name: "Secondary Structure Fractions"
+        
+        MDBoxLayout:
+            id: secondary_structure
+            orientation: 'vertical'
+            padding: 15
+            size_hint: 1, None
+            height: self.minimum_height
+            
+    SectionBoxLayout:
+        section_name: "Molecular Descriptors"
+        
+        MDBoxLayout:
+            id: molecular_descriptors
+            orientation: 'vertical'
+            padding: 15
+            size_hint: 1, None
+            height: self.minimum_height

@@ -1,0 +1,45 @@
+<MenuScreen>
+
+    MDFloatLayout:
+        size: root.width, root.height
+        md_bg_color: '#f3f4f6'
+        
+        MDIconButton:
+            icon: 'power'
+            style: 'tonal'
+            pos_hint: {'x': 0.01, 'top': 0.99}
+            theme_bg_color: 'Custom'
+            md_bg_color: 'white'
+            theme_icon_color: 'Custom'
+            icon_color: 'gray'
+            on_release:
+                root.open_popup()
+            
+        Image:
+            source: 'assets/img/logo.png'
+            size_hint: .3, None
+            height: self.width/self.image_ratio
+            pos_hint: {'center_x': .5, 'y': .6}
+            
+        CustomBoldLabel:
+            text: 'ProtiCalc'
+            font_size: '20sp'
+            pos_hint: {'center_x': .5, 'center_y': .54}
+            
+        GradientButton:
+            text: 'Start'
+            size_hint_x: .8
+            pos_hint: {'center_x': .5, 'center_y': .25}
+            on_release:
+                root.manager.transition.direction = 'left'
+                root.manager.current = 'protein_screen'
+            
+        CustomRegularLabel:
+            text: 'from'
+            pos_hint: {'center_x': .5, 'center_y': .08}
+            
+        CustomBoldLabel:
+            text: 'OuchenTech'
+            font_size: '14sp'
+            pos_hint: {'center_x': .5, 'center_y': .05}
+        

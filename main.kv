@@ -1,0 +1,19 @@
+#: include app/screens/menuscreen/menuscreen.kv
+#: include app/screens/proteinscreen/proteinscreen.kv
+#: include app/components/proteinanalysis/proteinanalysis.kv
+#: include app/customwidgets/customwidgets.kv
+#: include app/customwidgets/custompopups.kv
+#: include app/customwidgets/customlabels/customlabels.kv
+#: include app/customwidgets/custombuttons/custombuttons.kv
+#: include app/customwidgets/customlayouts/customlayouts.kv
+
+ScreenManager:
+    id: screen_manager
+    
+    MenuScreen:
+        name: 'menu_screen'
+        id: menu_screen
+    
+    ProteinScreen:
+        name: 'protein_screen'
+        id: protein_screen
