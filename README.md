@@ -40,25 +40,25 @@ To build from source:
 
 ## Screen Shots:
 
-![](https://github.com/OuchenTech/ProtiCalc/blob/main/screenshots/Screenshot_1.jpg)
+![](https://github.com/OuchenTech/ProtiCalc-0.1/blob/main/screenshots/Screenshot_1.jpg)
 
-![](https://github.com/OuchenTech/ProtiCalc/blob/main/screenshots/Screenshot_2.jpg)
+![](https://github.com/OuchenTech/ProtiCalc-0.1/blob/main/screenshots/Screenshot_2.jpg)
 
-![](https://github.com/OuchenTech/ProtiCalc/blob/main/screenshots/Screenshot_3.jpg)
+![](https://github.com/OuchenTech/ProtiCalc-0.1/blob/main/screenshots/Screenshot_3.jpg)
 
-![](https://github.com/OuchenTech/ProtiCalc/blob/main/screenshots/Screenshot_4.jpg)
+![](https://github.com/OuchenTech/ProtiCalc-0.1/blob/main/screenshots/Screenshot_4.jpg)
 
-![](https://github.com/OuchenTech/ProtiCalc/blob/main/screenshots/Screenshot_5.jpg)
+![](https://github.com/OuchenTech/ProtiCalc-0.1/blob/main/screenshots/Screenshot_5.jpg)
 
-![](https://github.com/OuchenTech/ProtiCalc/blob/main/screenshots/Screenshot_6.jpg)
+![](https://github.com/OuchenTech/ProtiCalc-0.1/blob/main/screenshots/Screenshot_6.jpg)
 
-![](https://github.com/OuchenTech/ProtiCalc/blob/main/screenshots/Screenshot_7.jpg)
+![](https://github.com/OuchenTech/ProtiCalc-0.1/blob/main/screenshots/Screenshot_7.jpg)
 
-![](https://github.com/OuchenTech/ProtiCalc/blob/main/screenshots/Screenshot_8.jpg)
+![](https://github.com/OuchenTech/ProtiCalc-0.1/blob/main/screenshots/Screenshot_8.jpg)
 
-![](https://github.com/OuchenTech/ProtiCalc/blob/main/screenshots/Screenshot_9.jpg)
+![](https://github.com/OuchenTech/ProtiCalc-0.1/blob/main/screenshots/Screenshot_9.jpg)
 
-![](https://github.com/OuchenTech/ProtiCalc/blob/main/screenshots/Screenshot_10.jpg)
+![](https://github.com/OuchenTech/ProtiCalc-0.1/blob/main/screenshots/Screenshot_10.jpg)
 
 ## Technologies Used
 
